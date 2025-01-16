@@ -1,82 +1,145 @@
-body{
+body {
     background: url(bg1.jpg);
     background-size: cover;
 }
-*{
-font-family: sans-serif;
-color: white;
+
+* {
+    font-family: sans-serif;
+    color: white;
 }
 
-.hero{
+.hero {
     position: relative;
     width: 100%;
 }
-nav{
+
+nav {
     display: flex;
     margin: auto;
     align-content: center;
     justify-content: space-between;
 }
-p{
+
+p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-right: 620px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     list-style-type: none;
     margin: 30px 20px;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: underline;
     text-decoration-line: none;
     font-weight: bold;
     color: #898989;
     text-transform: capitalize;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: #fff;
 }
-.col li a::after{
-    content:"";
+
+.col li a::after {
+    content: "";
     position: absolute;
     left: 0;
     width: 0;
     bottom: 480px;
     height: 3px;
     transition: all.5s;
-    background-color:red ;
+    background-color: red;
 }
-.col li a:hover::after{ 
+
+.col li a:hover::after {
     width: min-content;
 }
-.col li a:hover{
+
+.col li a:hover {
     text-decoration: underline;
     text-decoration-thickness: 3px;
-    text-decoration-color: red;    
+    text-decoration-color: red;
 }
-.main{
+
+.main {
     margin-left: 10%;
     margin-top: 12%;
 }
-.main h1{
+
+.main h1 {
     font-size: 30px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-span{
-    color:greenyellow;
+
+span {
+    color: greenyellow;
 }
-.main p{
+
+.main p {
     color: aliceblue;
     line-height: 22px;
     font-weight: bold;
 }
-.main a{
-    background-color:palevioletred;
+
+.main a {
+    background-color: palevioletred;
     border-radius: 5px;
     color: wheat;
     text-decoration: none;
     padding: 10px 18px;
     display: inline-block;
     margin: 25px 0;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav p {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main h1 {
+        font-size: 2em;
+    }
+
+    .main h3 {
+        font-size: 1.2em;
+    }
+
+    .main p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main h1 {
+        font-size: 1.8em;
+    }
+
+    .main h3 {
+        font-size: 1em;
+    }
+
+    .main p {
+        font-size: 0.8em;
+    }
+
+    .main a {
+        padding: 8px 15px;
+    }
+
+    nav .logo {
+        height: 50px;
+    }
 }
